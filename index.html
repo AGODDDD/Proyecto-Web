@@ -26,29 +26,71 @@
     <form id="Formulario Registro" method="get">
         <div>
             <fieldset>
-                <legend> Registro de Institución</legend>
+                <legend> Registro de Institución y Delegado Responsable</legend>
             <label for="Institución">Nombre de Institución (*)</label>
             <input type="text" placeholder="Ej. I.E. San Miguel" required>
             <label for="RUC">RUC (*)</label>
             <input type="text" maxlength="11" minlength="11" placeholder="Ingrese RUC" required>
             <label for="Direc"> Dirección </label>
             <input type="text" size="40" placeholder="Ej. Av. Petit Thouars 6704" >
-            </fieldset>
-            <fieldset>
-                <legend> Registro de Delegado</legend>
+           
+            <br><br>
+
             <label for="Nomb">Delegado Responsable (*)</label>
             <input type="text" placeholder="Ingrese Nombre" required>
             <label for="DNI">DNI (*)</label>
             <input type="text" maxlength="8" minlength="8" placeholder="Ingrese DNI" required>
             <label for="email"> Correo Electronico (*) </label>
-            <input type="text" size="40" placeholder="Ej. delegado@gmail.com" >
+            <input type="text" size="40" placeholder="Ej. Delegado@gmail.com" >
             <br><br>
             <label for="num"> Telefono (*) </label>
-            <input type="text" maxlength="7" minlength="7" placeholder="Ej. 939867652" required>
+            <input type="text" maxlength="9" minlength="9" placeholder="Ej. 939867652" required>
             </fieldset>
+
+            <p>
+            ¿Aceptas los terminos y condiciones de la pagina?: <a href="#">Terminos y Condiciones</a>  <!-- NO SE SI PUEDE IR  -->
+            <input type="radio" name="sn" value="S"> Si
+            <input type="radio" name="sn" value="N"> No
+           </p>
+
+           <p>
+            <input type="submit" value="Enviar datos">
+            <input type="reset" value="Borrar datos">
+           </p>
+
+        
+
             <fieldset>
-                
+                <legend>Creación de equipo</legend>
+                <label for="N.equipo">Nombre de tu equipo (*)</label>
+                <input type="text" placeholder="Ingresa el nombre de Equipo" required>
+                <label for="Cat"> Categoria/Año (*)</label>
+                <select required>
+                <option value="">Seleccione</option>
+                <option>1.° año - Brasil</option>
+                <option>2.° año - Argentina</option>
+                <option>3.° año - España</option>
+                <option>4.° año - Italia</option>
+                <option>5.° año - Francia</option>
+                </select>
+                <label for="Dep"> Deporte (*)</label>
+                <select required>
+                <option value="">Seleccione</option>
+                <option>Fútbol varones</option>
+                <option>Básquet varones</option>
+                <option>Vóley damas</option>
+                <option>Ping pong mixto</option>
+                </select>
+                <br><br>
+                <label for="NroInt"> Número de participantes (*)</label>
+                <input type="number" min="1" max="30" placeholder="11" required>
             </fieldset>
+
+           <p>
+            <input type="submit" value="Crear Equipo">
+            <input type="reset" value="Borrar datos">
+           </p>
+
 
         </div>
 

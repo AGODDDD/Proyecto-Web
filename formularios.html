@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olimpiadas PERÚ</title>
+</head>
+<body>
+    <header>
+        <img src="https://img.olympics.com/images/image/private/t_original_767-auto/f_auto/primary/iamkot1ddq9bobtib2fg" alt="Logo olimpiadas Perú">
+    </header>
+
+    <nav>
+        <a href="#">Fútbol</a>
+        <a href="#">Básquet</a>
+        <a href="#">Vóley</a>
+        <a href="#">Ping Pong</a>
+    </nav>
+
+    <section>
+        <div>
+            <h2 style="font-family: 'Courier New', Courier, monospace; color: crimson;">
+                Registro de Institución y equipo
+            </h2>
+        </div>
+    <form id="Formulario Registro" method="get">
+        <div>
+            <fieldset>
+                <legend> Registro de Institución y Delegado Responsable</legend>
+            <label for="Institución">Nombre de Institución (*)</label>
+            <input type="text" placeholder="Ej. I.E. San Miguel" required>
+            <label for="RUC">RUC (*)</label>
+            <input type="text" maxlength="11" minlength="11" placeholder="Ingrese RUC" required>
+            <label for="Direc"> Dirección </label>
+            <input type="text" size="40" placeholder="Ej. Av. Petit Thouars 6704" >
+           
+            <br><br>
+
+            <label for="Nomb">Delegado Responsable (*)</label>
+            <input type="text" placeholder="Ingrese Nombre" required>
+            <label for="DNI">DNI (*)</label>
+            <input type="text" maxlength="8" minlength="8" placeholder="Ingrese DNI" required>
+            <label for="email"> Correo Electronico (*) </label>
+            <input type="text" size="40" placeholder="Ej. Delegado@gmail.com" >
+            <br><br>
+            <label for="num"> Telefono (*) </label>
+            <input type="text" maxlength="9" minlength="9" placeholder="Ej. 939867652" required>
+            </fieldset>
+
+            <p>
+            ¿Aceptas los terminos y condiciones de la pagina?: <a href="#">Terminos y Condiciones</a>  
+            <input type="radio" name="sn" value="S"> Si
+            <input type="radio" name="sn" value="N"> No
+           </p>
+
+           <p>
+            <input type="submit" value="Enviar datos">
+            <input type="reset" value="Borrar datos">
+           </p>
+
+        
+
+            <fieldset>
+                <legend>Creación de equipo</legend>
+                <label for="N.equipo">Nombre de tu equipo (*)</label>
+                <input type="text" placeholder="Ingresa el nombre de Equipo" required>
+                <label for="Cat"> Categoria/Año (*)</label>
+                <select required>
+                <option value="">Seleccione</option>
+                <option>1.° año - Brasil</option>
+                <option>2.° año - Argentina</option>
+                <option>3.° año - España</option>
+                <option>4.° año - Italia</option>
+                <option>5.° año - Francia</option>
+                </select>
+                <label for="Dep"> Deporte (*)</label>
+                <select required>
+                <option value="">Seleccione</option>
+                <option>Fútbol varones</option>
+                <option>Básquet varones</option>
+                <option>Vóley damas</option>
+                <option>Ping pong mixto</option>
+                </select>
+                <br><br>
+                <label for="NroInt"> Número de participantes (*)</label>
+                <input type="number" min="1" max="30" placeholder="11" required>
+            </fieldset>
+
+           <p>
+            <input type="submit" value="Crear Equipo">
+            <input type="reset" value="Borrar datos">
+           </p>
+           
+
+
+            <fieldset>
+                <legend>Registro de Participantes</legend>
+                <p>Nombres: <input type="text" name="nombre" size="30" placeholder="Escriba su nombre completo"required></p>
+                <p>Apellidos: <input type="text" name="apellido" size="50" placeholder="Escriba ambos apellidos" required></p>
+                <p>DNI: <input type="text" maxlength="8" minlength="8" placeholder="Ingrese DNI" required></p>
+                <p>Año de nacimiento: <input type="number" name="nac" min="1900" placeholder="Solo escriba su año de nacimiento"required></p>
+               
+                 <p>Posicion: </p>
+                <select required>
+                <optgroup label="Fútbol varones">
+                <option value="Portero">Portero</option>
+                <option value="Defensa">Defensa</option>
+                <option value="Medio campo">Medio campo</option>
+                <option value="Delantero">Delantero</option>
+                </optgroup>
+                <optgroup label="Vóley damas">
+                <option value="Colocador">Armador</option>
+                <option value="Punta">Punta</option>
+                <option value="Opuesto">Opuesto</option>
+                <option value="Central">Central</option>
+                <option value="Punta">Punta</option>
+                <option value="Libero">Libero</option>
+                </optgroup>
+                <optgroup label="Ping Pong mixto">
+                <option value="Individual">Individual</option>
+                <option value="Dobles">Dobles</option>
+                </optgroup>
+                <optgroup label="Básquet varones">
+                <option value="Base">Base</option>    
+                <option value="Escolta">Escolta</option>
+                <option value="Alero">Alero</option>
+                <option value="Ala-pívot">Ala-pívot</option>
+                <option value="Pívot">Pívot</option>
+                </optgroup>
+                </select>
+            </fieldset> 
+
+            <p>
+            <input type="submit" value="Registrar Participante">
+            <input type="reset" value="Borrar datos">
+           </p>
+            
+        </div>
+
+    </form>
+    </section>
+
+    <footer>
+        <p>© 2026 Olimpiadas PERÚ</p>
+    </footer>
+</body>
+</html>

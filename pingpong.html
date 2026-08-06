@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de Ping Pong Mixto - Olimpiadas Perú 2026. Información y participantes.">
+    <meta name="theme-color" content="#0b1220">
+    <title>Ping Pong | Olimpiadas Perú 2026</title>
+
+    <!-- Fuente externa: Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Íconos externos: Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- CSS Modularizado -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/tables.css">
+    <link rel="stylesheet" href="css/js-panel.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+    <header class="site-header" id="inicio">
+        <nav class="navbar" aria-label="Navegación principal">
+            <a class="brand" href="index.html" aria-label="Ir al inicio de Olimpiadas Perú">
+                <img src="assets/images/logo.png" alt="Logo de Olimpiadas Perú" loading="eager">
+                <span>Olimpiadas Perú</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="registro.html"><i class="fa-solid fa-clipboard-list" aria-hidden="true"></i> Registro</a>
+                <a href="voley.html"><i class="fa-solid fa-volleyball" aria-hidden="true"></i> Vóley</a>
+                <a href="pingpong.html"><i class="fa-solid fa-table-tennis-paddle-ball" aria-hidden="true"></i> Ping Pong</a>
+                <a href="futbol.html"><i class="fa-solid fa-futbol" aria-hidden="true"></i> Fútbol</a>
+                <a href="basquet.html"><i class="fa-solid fa-basketball" aria-hidden="true"></i> Básquet</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="contenido-principal">
+        <section class="section" id="pingpong" aria-labelledby="titulo-pingpong">
+            <div class="section-heading">
+                <span class="section-badge"><i class="fa-solid fa-table-tennis-paddle-ball" aria-hidden="true"></i> Disciplina</span>
+                <h2 id="titulo-pingpong">Ping Pong Mixto</h2>
+                <p>Participantes en las modalidades individual y dobles del torneo.</p>
+            </div>
+            
+            <div class="stats-grid">
+                <article class="table-card">
+                    <h3>Equipos Inscritos (En Vivo)</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Equipo</th>
+                                    <th>Institución</th>
+                                    <th>Categoría</th>
+                                    <th>Delegado</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-inscritos-firebase">
+                                <tr>
+                                    <td colspan="4">Cargando datos en vivo...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+
+                <article class="table-card">
+                    <h3>Tabla General Individual</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Pos</th>
+                                    <th scope="col">Jugador(a)</th>
+                                    <th scope="col">Institución</th>
+                                    <th scope="col">Partidos Ganados</th>
+                                    <th scope="col">Sets a Favor</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-individual-pingpong">
+                                <tr><td colspan="5" style="text-align: center;">Estadísticas disponibles próximamente.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+
+                <article class="table-card">
+                    <h3>Tabla General Dobles</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Pos</th>
+                                    <th scope="col">Pareja</th>
+                                    <th scope="col">Institución</th>
+                                    <th scope="col">Partidos Ganados</th>
+                                    <th scope="col">Sets a Favor</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-dobles-pingpong">
+                                <tr><td colspan="5" style="text-align: center;">Estadísticas disponibles próximamente.</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="deporte-img-container">
+                            <img src="assets/images/pingpong.png" alt="Partido de Ping Pong" loading="lazy">
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Olimpiadas Perú. Sitio web académico con HTML5 y CSS3.</p>
+        <a href="#inicio" aria-label="Volver al inicio"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+    </footer>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

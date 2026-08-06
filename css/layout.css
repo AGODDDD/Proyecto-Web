@@ -1,0 +1,144 @@
+/* =========================================================
+   LAYOUT — Estructura general: navbar, hero y footer
+   ========================================================= */
+
+/* Contexto de apilamiento para las secciones principales */
+.site-header,
+main,
+.site-footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* Barra de navegación */
+.navbar {
+    width: min(100% - 2rem, var(--container));
+    margin: 0 auto;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+/* Marca o logo en el navbar */
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--color-white);
+    text-decoration: none;
+    font-family: var(--font-title);
+    font-weight: 800;
+    letter-spacing: 0.01em;
+}
+
+.brand img {
+    width: 74px;
+    height: 74px;
+    object-fit: contain;
+    padding: 0.35rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: var(--shadow-card);
+}
+
+/* Enlaces de navegación */
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.45rem;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.72rem 0.95rem;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+/* Efecto hover en los enlaces de navegación */
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    color: var(--color-white);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: var(--color-border);
+    transform: translateY(-3px);
+}
+
+/* Sección principal del Hero */
+.hero {
+    width: min(100% - 2rem, var(--container));
+    margin: 0 auto;
+    min-height: 580px;
+    padding: 5rem 0 6rem;
+    display: grid;
+    /* Usa fracciones en grid para definir proporciones relativas de las columnas */
+    grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Texto de la sección hero */
+.hero-text {
+    max-width: 680px;
+    color: var(--color-muted);
+    /* clamp() limita el tamaño de fuente entre 1rem, 1.6vw y 1.2rem */
+    font-size: clamp(1rem, 1.6vw, 1.2rem);
+    line-height: 1.8;
+}
+
+/* Acciones (botones) compartidas en hero y formularios */
+.hero-actions,
+.form-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-top: 1.8rem;
+}
+
+/* Pie de página */
+.site-footer {
+    width: min(100% - 2rem, var(--container));
+    margin: 2rem auto 0;
+    padding: 1.5rem 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    color: var(--color-muted);
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+.site-footer a {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    color: #07111f;
+    background: var(--color-primary);
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Efecto hover en los enlaces del pie de página */
+.site-footer a:hover,
+.site-footer a:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 26px rgba(0, 212, 255, 0.3);
+}

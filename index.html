@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Olimpiadas Perú 2026 - Sitio web oficial de registro y estadísticas deportivas.">
+    <meta name="theme-color" content="#0b1220">
+    <title>Olimpiadas Perú 2026 | Inicio</title>
+
+    <!-- Fuente externa: Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Íconos externos: Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- CSS Modularizado -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/tables.css">
+    <link rel="stylesheet" href="css/js-panel.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+    <header class="site-header" id="inicio">
+        <nav class="navbar" aria-label="Navegación principal">
+            <a class="brand" href="index.html" aria-label="Ir al inicio de Olimpiadas Perú">
+                <img src="assets/images/logo.png" alt="Logo de Olimpiadas Perú" loading="eager">
+                <span>Olimpiadas Perú</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="registro.html"><i class="fa-solid fa-clipboard-list" aria-hidden="true"></i> Registro</a>
+                <a href="voley.html"><i class="fa-solid fa-volleyball" aria-hidden="true"></i> Vóley</a>
+                <a href="pingpong.html"><i class="fa-solid fa-table-tennis-paddle-ball" aria-hidden="true"></i> Ping
+                    Pong</a>
+                <a href="futbol.html"><i class="fa-solid fa-futbol" aria-hidden="true"></i> Fútbol</a>
+                <a href="basquet.html"><i class="fa-solid fa-basketball" aria-hidden="true"></i> Básquet</a>
+                <a href="#" id="contactBtn"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Contacto</a>
+            </div>
+        </nav>
+
+        <section class="hero" aria-labelledby="titulo-principal">
+            <div class="hero-content">
+                <p class="eyebrow"><i class="fa-solid fa-trophy" aria-hidden="true"></i> Torneo interinstitucional 2026
+                </p>
+                <h1 id="titulo-principal">Registro oficial de equipos y participantes</h1>
+                <p class="hero-text">Gestiona instituciones, delegados, equipos y estadísticas deportivas desde una
+                    página moderna, responsiva y visualmente organizada.</p>
+                <div class="hero-actions" aria-label="Acciones principales">
+                    <a class="btn btn-primary" href="registro.html"><i class="fa-solid fa-user-plus"
+                            aria-hidden="true"></i> Registrar equipo</a>
+                    <a class="btn btn-secondary" href="futbol.html"><i class="fa-solid fa-chart-simple"
+                            aria-hidden="true"></i> Ver estadísticas</a>
+                </div>
+            </div>
+
+            <div class="hero-card" aria-label="Resumen de deportes participantes">
+                <div class="hero-icon"><i class="fa-solid fa-medal" aria-hidden="true"></i></div>
+                <h2>Disciplinas activas</h2>
+                <div class="sport-grid mini-grid">
+                    <article><a href="futbol.html"
+                            style="text-decoration: none; color: inherit; display: flex; gap: 0.75rem;"><i
+                                class="fa-solid fa-futbol" aria-hidden="true"></i><span>Fútbol</span></a></article>
+                    <article><a href="basquet.html"
+                            style="text-decoration: none; color: inherit; display: flex; gap: 0.75rem;"><i
+                                class="fa-solid fa-basketball" aria-hidden="true"></i><span>Básquet</span></a></article>
+                    <article><a href="voley.html"
+                            style="text-decoration: none; color: inherit; display: flex; gap: 0.75rem;"><i
+                                class="fa-solid fa-volleyball" aria-hidden="true"></i><span>Vóley</span></a></article>
+                    <article><a href="pingpong.html"
+                            style="text-decoration: none; color: inherit; display: flex; gap: 0.75rem;"><i
+                                class="fa-solid fa-table-tennis-paddle-ball" aria-hidden="true"></i><span>Ping
+                                Pong</span></a></article>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main id="contenido-principal">
+        <section class="section" aria-labelledby="titulo-deportes">
+            <div class="section-heading">
+                <span class="section-badge"><i class="fa-solid fa-medal" aria-hidden="true"></i> Deportes</span>
+                <h2 id="titulo-deportes">Selecciona un deporte</h2>
+                <p>Accede a la información detallada de cada disciplina, clasificaciones y participantes.</p>
+            </div>
+
+            <div class="sports-showcase">
+                <article class="sport-card">
+                    <div class="sport-card-icon"><i class="fa-solid fa-futbol"></i></div>
+                    <h3>Fútbol Varones</h3>
+                    <p>Tabla de posiciones, goleadores y asistencias del torneo de fútbol.</p>
+                    <a href="futbol.html" class="btn btn-primary"><i class="fa-solid fa-arrow-right"></i> Ver
+                        detalles</a>
+                </article>
+
+                <article class="sport-card">
+                    <div class="sport-card-icon"><i class="fa-solid fa-basketball"></i></div>
+                    <h3>Básquet Varones</h3>
+                    <p>Estadísticas de encestadores, rebotes y asistencias del torneo.</p>
+                    <a href="basquet.html" class="btn btn-primary"><i class="fa-solid fa-arrow-right"></i> Ver
+                        detalles</a>
+                </article>
+
+                <article class="sport-card">
+                    <div class="sport-card-icon"><i class="fa-solid fa-volleyball"></i></div>
+                    <h3>Vóley Damas</h3>
+                    <p>Información completa de todas las jugadoras participantes en vóley.</p>
+                    <a href="voley.html" class="btn btn-primary"><i class="fa-solid fa-arrow-right"></i> Ver
+                        detalles</a>
+                </article>
+
+                <article class="sport-card">
+                    <div class="sport-card-icon"><i class="fa-solid fa-table-tennis-paddle-ball"></i></div>
+                    <h3>Ping Pong Mixto</h3>
+                    <p>Participantes en las modalidades individual y dobles del torneo.</p>
+                    <a href="pingpong.html" class="btn btn-primary"><i class="fa-solid fa-arrow-right"></i> Ver
+                        detalles</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="titulo-registro">
+            <div class="section-heading">
+                <span class="section-badge"><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>
+                    Participar</span>
+                <h2 id="titulo-registro">¿Quieres registrarte?</h2>
+                <p>Completa el formulario de registro para tu institución, equipo y participantes.</p>
+            </div>
+            <div style="text-align: center;">
+                <a href="registro.html" class="btn btn-primary" style="font-size: 1.1rem;"><i
+                        class="fa-solid fa-user-plus" aria-hidden="true"></i> Ir al registro</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Olimpiadas Perú. Sitio web académico con HTML5 y CSS3.</p>
+        <a href="#inicio" aria-label="Volver al inicio"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+    </footer>
+    <script type="module" src="js/main.js"></script>
+
+    <!-- ======== NUEVO 17/07/2026 Ventana flotante (Modal) de Contacto ======== -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Formulario de Contacto</h2>
+
+            <form id="contactForm">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Ingrese su nombre" required>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" placeholder="Ingrese su correo" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" placeholder="Escriba su mensaje aquí..." required></textarea>
+
+                <button type="submit" class="btn-enviar-modal">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

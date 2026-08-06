@@ -1,0 +1,138 @@
+/* =========================================================
+   TABLES — Estilos de tablas, celdas y herramientas de búsqueda
+   ========================================================= */
+
+/* Contenedor principal de la tabla */
+.table-card {
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: var(--shadow-card);
+}
+
+.table-card h3 {
+    margin: 0;
+    padding: 1.1rem 1.25rem;
+    color: #11243d;
+    font-size: 1.1rem;
+    background: #f6f9fe;
+    border-bottom: 1px solid var(--color-table-border);
+}
+
+/* Envoltura para hacer la tabla responsiva */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Tabla base */
+table {
+    width: 100%;
+    min-width: 100%;
+    border-collapse: collapse;
+    color: #1f2c42;
+    background: var(--color-card-solid);
+}
+
+/* Título superior de la tabla */
+caption {
+    padding: 1rem;
+    color: #07111f;
+    background: linear-gradient(135deg, var(--color-accent), #ffe38a);
+    font-family: var(--font-title);
+    font-size: 1rem;
+    font-weight: 800;
+    text-align: left;
+}
+
+/* Celdas y encabezados (general) */
+th,
+td {
+    padding: 0.92rem 1rem;
+    border-bottom: 1px solid var(--color-table-border);
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Encabezados de tabla (th) */
+th {
+    color: var(--color-white);
+    background: linear-gradient(135deg, #10243f, #153e68);
+    font-size: 0.86rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+td:first-child,
+th:first-child {
+    font-weight: 800;
+}
+
+/* Filas alternas (cebreadas) */
+tbody tr:nth-child(even) {
+    background: #f7fbff;
+}
+
+tbody tr {
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+/* Efecto hover en las filas */
+tbody tr:hover {
+    background: #e7f8ff;
+    transform: scale(1.005);
+}
+
+/* Grilla para las estadísticas */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem;
+}
+
+.stats-grid .table-card:first-child {
+    grid-column: 1 / -1;
+}
+
+.stats-grid .table-card:last-child:nth-child(even) {
+    grid-column: 1 / -1;
+}
+
+/* Herramientas de la tabla (buscador superior) */
+.table-tools {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem;
+    color: #172033;
+    background: #ffffff;
+    border-bottom: 1px solid var(--color-table-border);
+}
+
+.table-tools label {
+    color: #10243f;
+    font-weight: 800;
+}
+
+/* Input del buscador de tabla */
+.search-input {
+    min-height: 42px;
+    border-radius: 999px;
+}
+
+/* Contador de resultados del buscador */
+.contador-resultado {
+    margin: 0;
+    color: #526173;
+    font-size: 0.88rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Clase auxiliar para ocultar filas durante la búsqueda */
+.fila-oculta {
+    display: none;
+}

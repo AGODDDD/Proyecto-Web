@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario de registro de instituciones, equipos y participantes para las Olimpiadas Perú 2026.">
+    <meta name="theme-color" content="#0b1220">
+    <title>Registro | Olimpiadas Perú 2026</title>
+
+    <!-- Fuente externa: Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Íconos externos: Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- CSS Modularizado -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/tables.css">
+    <link rel="stylesheet" href="css/js-panel.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+    <header class="site-header" id="inicio">
+        <nav class="navbar" aria-label="Navegación principal">
+            <a class="brand" href="index.html" aria-label="Ir al inicio de Olimpiadas Perú">
+                <img src="assets/images/logo.png" alt="Logo de Olimpiadas Perú" loading="eager">
+                <span>Olimpiadas Perú</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="registro.html"><i class="fa-solid fa-clipboard-list" aria-hidden="true"></i> Registro</a>
+                <a href="voley.html"><i class="fa-solid fa-volleyball" aria-hidden="true"></i> Vóley</a>
+                <a href="pingpong.html"><i class="fa-solid fa-table-tennis-paddle-ball" aria-hidden="true"></i> Ping Pong</a>
+                <a href="futbol.html"><i class="fa-solid fa-futbol" aria-hidden="true"></i> Fútbol</a>
+                <a href="basquet.html"><i class="fa-solid fa-basketball" aria-hidden="true"></i> Básquet</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="contenido-principal">
+        <section class="section section-form" aria-labelledby="titulo-registro">
+            <div class="section-heading">
+                <span class="section-badge"><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i> Formulario</span>
+                <h2 id="titulo-registro">Registro de institución, equipo y participante</h2>
+                <p>Completa la información solicitada. Los campos marcados con asterisco son obligatorios.</p>
+            </div>
+
+            <form id="formulario-registro" class="registration-form" method="get" action="#" autocomplete="on" novalidate>
+                <fieldset>
+                    <legend><i class="fa-solid fa-building-columns" aria-hidden="true"></i> Institución y delegado responsable</legend>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="institucion">Nombre de institución <span aria-hidden="true">*</span></label>
+                            <input id="institucion" name="institucion" type="text" placeholder="Ej. I.E. San Miguel" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ruc">RUC <span aria-hidden="true">*</span></label>
+                            <input id="ruc" name="ruc" type="text" inputmode="numeric" pattern="[0-9]{11}" maxlength="11" minlength="11" placeholder="Ingrese 11 dígitos" required>
+                        </div>
+
+                        <div class="form-group form-group-wide">
+                            <label for="direccion">Dirección</label>
+                            <input id="direccion" name="direccion" type="text" placeholder="Ej. Av. Petit Thouars 6704">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="delegado">Delegado responsable <span aria-hidden="true">*</span></label>
+                            <input id="delegado" name="delegado" type="text" placeholder="Ingrese nombres y apellidos" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dni-delegado">DNI <span aria-hidden="true">*</span></label>
+                            <input id="dni-delegado" name="dni_delegado" type="text" inputmode="numeric" pattern="[0-9]{8}" maxlength="8" minlength="8" placeholder="Ingrese 8 dígitos" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo electrónico <span aria-hidden="true">*</span></label>
+                            <input id="email" name="email" type="email" placeholder="delegado@gmail.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">Teléfono <span aria-hidden="true">*</span></label>
+                            <input id="telefono" name="telefono" type="tel" inputmode="numeric" pattern="[0-9]{9}" maxlength="9" minlength="9" placeholder="Ej. 939867652" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend><i class="fa-solid fa-people-group" aria-hidden="true"></i> Creación de equipo</legend>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="nombre-equipo">Nombre del equipo <span aria-hidden="true">*</span></label>
+                            <input id="nombre-equipo" name="nombre_equipo" type="text" placeholder="Ingresa el nombre del equipo" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="categoria">Categoría o año <span aria-hidden="true">*</span></label>
+                            <select id="categoria" name="categoria" required>
+                                <option value="">Seleccione</option>
+                                <option value="1-ano">1.° año</option>
+                                <option value="2-ano">2.° año</option>
+                                <option value="3-ano">3.° año</option>
+                                <option value="4-ano">4.° año</option>
+                                <option value="5-ano">5.° año</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="deporte">Deporte <span aria-hidden="true">*</span></label>
+                            <select id="deporte" name="deporte" required>
+                                <option value="">Seleccione</option>
+                                <option value="futbol">Fútbol varones</option>
+                                <option value="basquet">Básquet varones</option>
+                                <option value="voley">Vóley damas</option>
+                                <option value="pingpong">Ping pong mixto</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </fieldset>
+
+                <fieldset id="participantes-container">
+                    <legend><i class="fa-solid fa-user-check" aria-hidden="true"></i> Registro de participantes</legend>
+                    <div id="participantes-list">
+                        <div class="participante-entry form-grid">
+                            <div class="form-group">
+                                <label>Nombres <span aria-hidden="true">*</span></label>
+                                <input class="input-nombres" name="nombres[]" type="text" placeholder="Escriba sus nombres" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Apellidos <span aria-hidden="true">*</span></label>
+                                <input class="input-apellidos" name="apellidos[]" type="text" placeholder="Escriba ambos apellidos" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>DNI <span aria-hidden="true">*</span></label>
+                                <input class="input-dni" name="dni_participante[]" type="text" inputmode="numeric" pattern="[0-9]{8}" maxlength="8" minlength="8" placeholder="Ingrese 8 dígitos" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Año de nacimiento <span aria-hidden="true">*</span></label>
+                                <input class="input-nacimiento" name="nacimiento[]" type="number" min="1900" max="2026" placeholder="Ej. 2008" required>
+                            </div>
+
+                            <div class="form-group form-group-wide">
+                                <label>Posición o modalidad <span aria-hidden="true">*</span></label>
+                                <select class="input-posicion" name="posicion[]" required>
+                                    <option value="">Seleccione</option>
+                                    <optgroup label="Fútbol varones">
+                                        <option value="Portero">Portero</option>
+                                        <option value="Defensa">Defensa</option>
+                                        <option value="Medio campo">Medio campo</option>
+                                        <option value="Delantero">Delantero</option>
+                                    </optgroup>
+                                    <optgroup label="Vóley damas">
+                                        <option value="Armador">Armador</option>
+                                        <option value="Punta">Punta</option>
+                                        <option value="Opuesto">Opuesto</option>
+                                        <option value="Central">Central</option>
+                                        <option value="Libero">Líbero</option>
+                                    </optgroup>
+                                    <optgroup label="Ping Pong mixto">
+                                        <option value="Individual">Individual</option>
+                                        <option value="Dobles">Dobles</option>
+                                    </optgroup>
+                                    <optgroup label="Básquet varones">
+                                        <option value="Base">Base</option>
+                                        <option value="Escolta">Escolta</option>
+                                        <option value="Alero">Alero</option>
+                                        <option value="Ala-pivote">Ala pívot</option>
+                                        <option value="Pivote">Pívot</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 1.5rem;">
+                        <button type="button" id="btn-agregar-participante" class="btn btn-ghost">
+                            <i class="fa-solid fa-plus" aria-hidden="true"></i> Agregar jugador
+                        </button>
+                    </div>
+                </fieldset>
+
+                <div class="terms-box">
+                    <input id="terminos" name="terminos" type="checkbox" required>
+                    <label for="terminos">Acepto los <a href="#" aria-label="Leer términos y condiciones">términos y condiciones</a> de la página.</label>
+                </div>
+
+                <div class="form-actions">
+                    <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Enviar registro</button>
+                    <button class="btn btn-ghost" type="reset"><i class="fa-solid fa-eraser" aria-hidden="true"></i> Limpiar datos</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Olimpiadas Perú. Sitio web académico con HTML5 y CSS3.</p>
+        <a href="#inicio" aria-label="Volver al inicio"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+    </footer>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+/* =========================================================
+   ANIMATIONS — Animaciones con keyframes y transiciones
+   ========================================================= */
+
+/* Animación de entrada principal */
+.hero-content,
+.hero-card,
+.registration-form,
+.table-card {
+    animation: fadeUp 0.8s ease both;
+}
+
+/* Retraso en la tarjeta hero para efecto en cascada */
+.hero-card {
+    animation-delay: 0.12s;
+}
+
+/* Animación de las tarjetas de deportes */
+.sport-card {
+    animation: fadeUp 0.8s ease both;
+}
+
+/* Pseudo-elemento animado de la tarjeta hero (burbuja de fondo) */
+.hero-card::before {
+    content: "";
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    right: -64px;
+    top: -64px;
+    border-radius: 52% 48% 70% 30% / 30% 52% 48% 70%;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.34), rgba(255, 204, 51, 0.26));
+    animation: morph 8s ease-in-out infinite;
+}
+
+/* Definición de la animación de deslizamiento y aparición */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Definición de la animación de deformación (efecto líquido/blob) */
+@keyframes morph {
+    0%, 100% {
+        border-radius: 52% 48% 70% 30% / 30% 52% 48% 70%;
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        border-radius: 30% 70% 35% 65% / 62% 38% 70% 30%;
+        transform: rotate(18deg) scale(1.08);
+    }
+}

@@ -1,0 +1,112 @@
+/* =========================================================
+   FORMS — Formulario de registro, inputs, selects y checks
+   ========================================================= */
+
+/* Contenedor principal del formulario de registro */
+.registration-form {
+    padding: clamp(1rem, 3vw, 2rem);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: var(--radius-lg);
+    color: #1b2437;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: var(--shadow-soft);
+}
+
+/* Grupos de campos (fieldset) */
+fieldset {
+    margin: 0 0 1.3rem;
+    padding: clamp(1rem, 2.8vw, 1.5rem);
+    border: 1px solid #d8e2f0;
+    border-radius: var(--radius-md);
+    background: linear-gradient(180deg, #ffffff, #f8fbff);
+}
+
+/* Leyenda del fieldset */
+legend {
+    padding: 0 0.6rem;
+    color: #0f3c56;
+    font-size: 1.02rem;
+    font-weight: 800;
+}
+
+/* Grilla para los campos del formulario */
+.form-grid {
+    display: grid;
+    /* Divide el formulario en 3 columnas iguales */
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+/* Contenedor individual de cada etiqueta e input */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+/* Ocupar un ancho de dos columnas en la grilla */
+.form-group-wide {
+    grid-column: span 2;
+}
+
+/* Etiquetas (Labels) */
+label {
+    color: #263149;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* Campos de entrada y selección */
+input,
+select {
+    width: 100%;
+    min-height: 46px;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid #cbd7e6;
+    border-radius: var(--radius-sm);
+    outline: none;
+    color: #172033;
+    background: #ffffff;
+    font: inherit;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+/* Efecto hover en inputs y selects */
+input:hover,
+select:hover {
+    border-color: #99b8d3;
+}
+
+/* Efecto focus en inputs y selects */
+input:focus,
+select:focus {
+    border-color: var(--color-primary-dark);
+    box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.18);
+    transform: translateY(-1px);
+}
+
+/* Caja de términos y condiciones */
+.terms-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #d8e2f0;
+    border-radius: var(--radius-md);
+    background: #f4f8ff;
+}
+
+.terms-box input {
+    width: 18px;
+    min-width: 18px;
+    height: 18px;
+    min-height: 18px;
+    margin-top: 0.18rem;
+    accent-color: var(--color-primary-dark);
+}
+
+.terms-box a {
+    color: #00708d;
+    font-weight: 800;
+}

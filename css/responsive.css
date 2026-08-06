@@ -1,0 +1,122 @@
+/* =========================================================
+   RESPONSIVE — Consultas de medios para adaptación a pantallas y accesibilidad
+   ========================================================= */
+
+/* Adaptación para pantallas de tablet y menores (hasta 980px) */
+@media (max-width: 980px) {
+    .navbar,
+    .hero {
+        align-items: stretch;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        padding-top: 3rem;
+    }
+
+    .form-grid,
+    .stats-grid,
+    .sports-showcase {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .form-group-wide {
+        grid-column: span 2;
+    }
+}
+
+/* Adaptación para la sección del panel JS (hasta 760px) */
+@media (max-width: 760px) {
+    .resumen-cards,
+    .table-tools {
+        grid-template-columns: 1fr;
+    }
+
+    .contador-resultado {
+        white-space: normal;
+    }
+}
+
+/* Adaptación para dispositivos móviles (hasta 680px) */
+@media (max-width: 680px) {
+    .brand {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .nav-links {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+    }
+
+    .nav-links a {
+        justify-content: center;
+        padding-inline: 0.7rem;
+    }
+
+    .hero,
+    .section {
+        width: min(100% - 1rem, var(--container));
+    }
+
+    .hero {
+        padding-bottom: 3.5rem;
+    }
+
+    .hero-actions,
+    .form-actions,
+    .site-footer {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .mini-grid,
+    .form-grid,
+    .stats-grid,
+    .sports-showcase {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group-wide,
+    .stats-grid .table-card:first-child {
+        grid-column: auto;
+    }
+
+    .registration-form {
+        padding: 1rem;
+    }
+
+    fieldset {
+        padding: 1rem;
+    }
+
+    table {
+        min-width: 620px;
+    }
+}
+
+/* Accesibilidad: Reducción de movimiento para usuarios que lo prefieren */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
